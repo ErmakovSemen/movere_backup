@@ -1,0 +1,11 @@
+git clone https://github.com/VAST-AI-Research/TripoSR.git
+cd TripoSR
+python3 -m venv venv
+source venv/bin/activate
+pip install torch torchvision torchaudio
+pip install -r requirements.txt
+pip install --upgrade transformers
+export KMP_DUPLICATE_LIB_OK=TRUE
+export OMP_NUM_THREADS=1
+export KMP_INIT_AT_FORK=FALSE
+python run.py examples/chair.png --output-dir output/
